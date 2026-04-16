@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ransomware Detection Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+}
+
+/* Container */
+.container {
+    padding: 30px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #38bdf8;
+}
+
+/* Glass Card */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: rgba(56,189,248,0.2);
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Grid for images */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Image card */
+.img-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #94a3b8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 Ransomware Detection Model Dashboard</h1>
+
+<!-- MODEL COMPARISON TABLE -->
+<div class="card">
+<h2>📊 Model Comparison</h2>
+
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Accuracy</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1 Score</th>
+<th>ROC-AUC</th>
+<th>CV Score</th>
+</tr>
+</thead>
+
+<tbody>
+<!-- 🔥 Replace values with your CSV data -->
+<tr>
+<td>RandomForest</td>
+<td>0.9934</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.9924</td>
+<td>0.99</td>
+<td>0.99</td>
+</tr>
+
+<tr>
+<td>XGBoost</td>
+<td>0.9933</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.9923</td>
+<td>0.99</td>
+<td>0.99</td>
+</tr>
+
+<tr>
+<td>LightGBM</td>
+<td>0.9930</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.9920</td>
+<td>0.99</td>
+<td>0.99</td>
+</tr>
+
+<tr>
+<td>CatBoost</td>
+<td>0.9920</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.9908</td>
+<td>0.99</td>
+<td>0.99</td>
+</tr>
+
+<tr>
+<td><b>Stacking</b></td>
+<td><b>0.995+</b></td>
+<td><b>0.99</b></td>
+<td><b>0.99</b></td>
+<td><b>0.994</b></td>
+<td><b>0.99</b></td>
+<td><b>0.99</b></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<!-- CONFUSION MATRICES -->
+<div class="card">
+<h2>📉 Confusion Matrices</h2>
+
+<div class="grid">
+
+<div class="img-card">
+<h4>RandomForest</h4>
+<img src="research_results/plots/RandomForest_cm.png">
+</div>
+
+<div class="img-card">
+<h4>XGBoost</h4>
+<img src="research_results/plots/XGBoost_cm.png">
+</div>
+
+<div class="img-card">
+<h4>LightGBM</h4>
+<img src="research_results/plots/LightGBM_cm.png">
+</div>
+
+<div class="img-card">
+<h4>CatBoost</h4>
+<img src="research_results/plots/CatBoost_cm.png">
+</div>
+
+<div class="img-card">
+<h4>Stacking</h4>
+<img src="research_results/plots/Stacking_cm.png">
+</div>
+
+</div>
+</div>
+
+<!-- SUMMARY -->
+<div class="card">
+<h2>🧠 Model Summary</h2>
+<p>
+The proposed ransomware detection system utilizes an ensemble of machine learning models,
+including RandomForest, XGBoost, LightGBM, and CatBoost. A stacking approach further enhances performance.
+</p>
+
+<p>
+The model achieves <b>~99% accuracy</b> with high precision and recall, making it highly effective
+for ransomware detection.
+</p>
+</div>
+
+<div class="footer">
+© 2026 Ransomware Detection Research Project
+</div>
+
+</div>
+
+</body>
+</html>
